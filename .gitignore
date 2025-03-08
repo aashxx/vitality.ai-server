@@ -1,0 +1,47 @@
+# Bytecode and caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+
+# Virtual environment
+venv/
+env/
+
+# Flask-specific
+instance/
+*.db
+*.sqlite3
+
+# MongoDB & Sensitive Configurations
+*.log
+dump/
+data/
+*.bson
+*.json
+.env
+.env.local
+config.py  # Ignore only if it has sensitive data
+
+# Dependencies
+Pipfile
+Pipfile.lock
+requirements.txt
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Debugging & IDE Files
+logs/
+*.log
+debug.log
+.vscode/
+.idea/
+.DS_Store
+*.sublime-workspace
+
+# JWT Token Cache
+jwt-secret.key
+jwt-private.pem
+jwt-public.pem
