@@ -14,10 +14,12 @@ app.mongo = mongo
 from routes.auth import auth_bp
 from routes.predictions import prediction_bp
 from routes.recommendations import recommendation_bp
+from routes.alerts import alert_bp
 
 app.register_blueprint(auth_bp, url_prefix="/api/auth")
 app.register_blueprint(prediction_bp, url_prefix="/api/predict")
 app.register_blueprint(recommendation_bp, url_prefix="/api/recommendation")
+app.register_blueprint(alert_bp, url_prefix="/api/alert")
 
 if __name__ == "__main__":
     app.run(debug=True)
