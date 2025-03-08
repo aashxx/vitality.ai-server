@@ -1,3 +1,4 @@
+import datetime
 from flask import Blueprint, request, jsonify, current_app
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -23,9 +24,23 @@ def register():
     current_app.mongo.db.users.insert_one({
         "fullName": fullName,
         "email": email,
-        "password": hashed_pwd
+        "password": hashed_pwd,
+        "age": "",
+        "gender": "",
+        "contact": "",
+        "emergencyContact": "",
+        "height": "",
+        "weight": "",
+        "BMI": "",
+        "heartRate": "",
+        "sysBP": "",
+        "diaBP": "",
+        "bodyTemp": "",
+        "riskLevel": "",
+        "cardiovascularRisk": "",
+        "hypertensionRisk": "",
+        "createdAt": datetime.datetime.now(datetime.timezone.utc).isoformat()
     })
-
     access_token = create_access_token(identity=email)
 
     return jsonify({ 
@@ -62,4 +77,3 @@ def profile():
         'message': "success",
         'user': user
     }), 200
-
