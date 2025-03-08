@@ -27,7 +27,6 @@ config.py  # Ignore only if it has sensitive data
 # Dependencies
 Pipfile
 Pipfile.lock
-requirements.txt
 node_modules/
 npm-debug.log
 yarn-error.log
