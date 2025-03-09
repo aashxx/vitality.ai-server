@@ -6,7 +6,7 @@ Vitality AI is an AI-powered health monitoring system that predicts health risks
 
 ### 1️⃣ **Clone the Repository**
 ```sh
-git clone https://github.com/your-username/vitality-ai-backend.git
+git clone https://github.com/aashxx/vitality-ai-backend.git
 cd vitality-ai-backend
 ```
 
