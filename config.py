@@ -8,3 +8,5 @@ class Config:
     MONGO_URI = os.getenv("MONGO_URI")
     JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY")
     GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+    GMAIL_APP_PASSWORD = os.getenv("GMAIL_APP_PASSWORD")
+    GMAIL_CLIENT_ID = os.getenv("GMAIL_CLIENT_ID")

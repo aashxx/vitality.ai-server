@@ -4,13 +4,14 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from flask import Blueprint, jsonify, current_app
 from flask_jwt_extended import jwt_required, get_jwt_identity
+from config import Config
 
 alert_bp = Blueprint('alert', __name__)
 
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
-EMAIL_SENDER = "tmohamedaashir@gmail.com"  
-EMAIL_PASSWORD = "wyhxxulbdkxpvsib" 
+EMAIL_SENDER = Config.GMAIL_CLIENT_ID 
+EMAIL_PASSWORD = Config.GMAIL_APP_PASSWORD
 
 def send_email_alert(patient_email, patient_name, emergency_contact, risk_level):
     try:
