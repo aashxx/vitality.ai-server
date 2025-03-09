@@ -85,13 +85,13 @@ Your server will now run at:
 ### **3️⃣ AI Health Recommendations** (`/api/recommendations`)
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `POST` | `/api/recommendations/generate` | Generate AI-based health tips |
+| `POST` | `/api/recommendation/generate` | Generate AI-based health tips |
 
 ---
 
 ### **4️⃣ Alerts & Notifications** (`/api/alerts`)
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `POST` | `/api/alerts/send` | Send an alert if a patient is at high risk |
+| `POST` | `/api/alert/trigger` | Send an alert if a patient is at high risk |
 
 
